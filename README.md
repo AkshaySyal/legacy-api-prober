@@ -58,24 +58,34 @@ The agent:
 6. Generates generated/sdk.ts
 
 ### Documentation Research Phase
+
 <img width="424" height="81" alt="Screenshot 2026-03-02 at 7 02 10 PM" src="https://github.com/user-attachments/assets/ef6d5160-e745-4ec6-9fb2-94c0165010e9" />
+
 **Explanation:** Agent reads both legacy API documentation files before starting the probe
 
 ### Probing customer_b
+
 <img width="805" height="471" alt="Screenshot 2026-03-02 at 7 02 27 PM" src="https://github.com/user-attachments/assets/c5c0c932-70c3-4eb7-aeef-6f8255545b52" />
+
 **Explanation:** Agent probes customer_b (v1), uses LLM hints, tries a create-order call, and successfully discovers the correct API contract
 
 ### Probing customer_a
+
 <img width="813" height="473" alt="Screenshot 2026-03-02 at 7 03 06 PM" src="https://github.com/user-attachments/assets/4ae540e6-2ff2-4332-9e3e-c6e330451534" />
+
 **Explanation:** Agent probes customer_a (v1) and confirms the documented API works as expected
 
 ### Simulated Upgrade to v2
+
 <img width="792" height="916" alt="Screenshot 2026-03-02 at 7 03 33 PM" src="https://github.com/user-attachments/assets/e20b8343-f4dd-4702-b1a9-b9bbc4b89361" />
+
 **Explanation:** Agent simulates a customer upgrade to v2, tries multiple API variants, finds the correct XML + PUT contract, validates it, and generates an SDK
 
 ```bash
 Run the command after closing servers
 npm test
 ```
+
 <img width="978" height="141" alt="Screenshot 2026-03-02 at 7 15 44 PM" src="https://github.com/user-attachments/assets/d76f28d9-8372-4bed-8c4b-494b87365cc4" />
+
 **Explanation:** All automated tests pass, verifying that the agent correctly adapts to both documented (v1) and incorrectly documented (v2) API versions.
