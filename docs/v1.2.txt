@@ -1,0 +1,30 @@
+Legacy API v1.2
+
+Base URL: http://localhost:4012
+
+Authentication:
+- Requests use X-Api-Key
+- Some deployments also require X-Client-Token
+
+Business objects:
+- OrderRecord fields: id, customer_ref, commodity_id, amount
+- InvoiceRecord fields: id, customer_ref, line_item_id, total
+
+Order creation flow:
+1) PUT /orders
+   Payload uses customer_ref, commodity_id, amount
+   Returns { "id": "string" }
+
+2) GET /orders/:id
+
+Invoice creation flow:
+1) PUT /invoices
+   Payload uses customer_ref, line_item_id, total
+   Returns { "id": "string" }
+
+2) GET /invoices/:id
+
+Errors:
+- 401 unauthorized
+- 404 not_found
+- 400 bad_request

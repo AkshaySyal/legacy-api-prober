@@ -1,0 +1,28 @@
+{
+  "customers": [
+    {
+      "id": "customerA",
+      "installedVersion": "v1.1",
+      "baseUrlByVersion": {
+        "v1.1": "http://localhost:4011",
+        "v1.2": "http://localhost:4012"
+      },
+      "credentials": {
+        "apiKey": "A_API_KEY",
+        "clientToken": "A_CLIENT_TOKEN"
+      }
+    },
+    {
+      "id": "customerB",
+      "installedVersion": "v1.1",
+      "baseUrlByVersion": {
+        "v1.1": "http://localhost:4011",
+        "v1.2": "http://localhost:4012"
+      },
+      "credentials": {
+        "apiKey": "B_API_KEY",
+        "clientToken": "B_CLIENT_TOKEN"
+      }
+    }
+  ]
+}

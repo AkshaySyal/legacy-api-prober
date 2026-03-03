@@ -1,0 +1,42 @@
+# dependencies
+node_modules/
+
+# build / transpile outputs
+dist/
+build/
+out/
+*.tsbuildinfo
+
+# generated artifacts (this repo generates SDK + profiles here)
+generated/
+
+# logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# env files / secrets
+.env
+.env.*
+!.env.example
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# coverage / test artifacts
+coverage/
+.nyc_output/
+
+# cache
+.cache/
+.eslintcache
+
+# misc
+*.tgz

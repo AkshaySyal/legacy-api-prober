@@ -1,0 +1,14 @@
+{
+  "actions": [
+    {
+      "id": "create_order",
+      "type": "create",
+      "entity": "order"
+    },
+    {
+      "id": "create_invoice",
+      "type": "create",
+      "entity": "invoice"
+    }
+  ]
+}

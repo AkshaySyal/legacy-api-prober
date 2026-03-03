@@ -1,11 +1,22 @@
 {
-    "compilerOptions": {
-      "target": "ES2022",
-      "module": "ES2022",
-      "moduleResolution": "Bundler",
-      "strict": true,
-      "esModuleInterop": true,
-      "types": ["jest"]
-    },
-    "include": ["src/**/*.ts", "jest.config.ts"]
-  }
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "outDir": "dist",
+    "rootDir": ".",
+    "types": [
+      "node",
+      "jest"
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "tests/**/*.ts",
+    "generated/sdk/**/*.ts"
+  ]
+}
