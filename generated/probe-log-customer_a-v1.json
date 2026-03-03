@@ -1,0 +1,89 @@
+{
+  "events": [
+    {
+      "ts": "2026-03-03T01:38:59.698Z",
+      "type": "start",
+      "customerId": "customer_a",
+      "version": "v1",
+      "actions": [
+        "create_order",
+        "read_invoice",
+        "post_invoice"
+      ]
+    },
+    {
+      "ts": "2026-03-03T01:38:59.698Z",
+      "type": "access_analysis",
+      "needsWrite": true
+    },
+    {
+      "ts": "2026-03-03T01:39:01.960Z",
+      "type": "candidates",
+      "contentTypes": [
+        "json"
+      ],
+      "methods": [
+        "POST"
+      ],
+      "commodityFields": [
+        "commodity_code_id",
+        "commodity_id"
+      ],
+      "quantityFields": [
+        "quantity",
+        "qty"
+      ]
+    },
+    {
+      "ts": "2026-03-03T01:39:01.966Z",
+      "type": "attempt",
+      "action": "create_order",
+      "variant": {
+        "ct": "json",
+        "method": "POST",
+        "commodityField": "commodity_code_id",
+        "quantityField": "quantity",
+        "requiresTemplate": false
+      },
+      "request": {
+        "method": "POST",
+        "path": "/orders",
+        "contentType": "json"
+      },
+      "response": {
+        "ok": true,
+        "status": 201,
+        "sample": "{\"order_id\":\"ord_v1_577b31608e1d4\",\"status\":\"created\",\"commodity_code_id\":\"CORN\",\"quantity\":7}"
+      }
+    },
+    {
+      "ts": "2026-03-03T01:39:01.969Z",
+      "type": "validated",
+      "what": "readback order ord_v1_577b31608e1d4",
+      "ok": true,
+      "details": {
+        "commodityBack": "CORN",
+        "quantityBack": 7
+      }
+    },
+    {
+      "ts": "2026-03-03T01:39:01.978Z",
+      "type": "validated",
+      "what": "readback invoice inv_v1_6d5e2000f2427",
+      "ok": true
+    },
+    {
+      "ts": "2026-03-03T01:39:01.978Z",
+      "type": "discovered",
+      "discovered": {
+        "version": "v1",
+        "baseUrl": "http://localhost:4011",
+        "contentType": "json",
+        "createOrderMethod": "POST",
+        "createOrderCommodityField": "commodity_code_id",
+        "createOrderQuantityField": "quantity",
+        "requiresTemplate": false
+      }
+    }
+  ]
+}

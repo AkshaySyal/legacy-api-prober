@@ -1,0 +1,53 @@
+Legacy System API - v1.1 (JSON)
+
+Base URL: http://localhost:4011
+
+Auth:
+- Header: x-api-token: <TOKEN>
+- Header: x-customer-id: <CUSTOMER_ID>
+
+Content:
+- JSON request/response
+
+Endpoints:
+
+1) Create Order
+POST /orders
+Body:
+{
+  "commodity_code_id": "string",
+  "quantity": number
+}
+Response: 201
+{
+  "order_id": "ord_...",
+  "status": "created",
+  "commodity_code_id": "string",
+  "quantity": number
+}
+
+2) Read Order
+GET /orders/:order_id
+Response: 200 same shape as create response
+
+3) Read Invoice
+GET /invoices/:invoice_id
+Response: 200
+{
+  "invoice_id": "inv_...",
+  "amount": number,
+  "status": "unpaid"
+}
+
+4) Post New Invoice
+POST /invoices
+Body:
+{
+  "amount": number
+}
+Response: 201
+{
+  "invoice_id": "inv_...",
+  "amount": number,
+  "status": "unpaid"
+}

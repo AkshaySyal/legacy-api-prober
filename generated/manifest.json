@@ -1,0 +1,20 @@
+{
+  "customer_b": {
+    "version": "v1",
+    "baseUrl": "http://localhost:4011",
+    "contentType": "json",
+    "createOrderMethod": "POST",
+    "createOrderCommodityField": "commodity_code_id",
+    "createOrderQuantityField": "quantity",
+    "requiresTemplate": false
+  },
+  "customer_a": {
+    "version": "v2",
+    "baseUrl": "http://localhost:4012",
+    "contentType": "xml",
+    "createOrderMethod": "PUT",
+    "createOrderCommodityField": "commodity_code_id",
+    "createOrderQuantityField": "quantity",
+    "requiresTemplate": true
+  }
+}
