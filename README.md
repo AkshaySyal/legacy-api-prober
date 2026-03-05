@@ -108,7 +108,7 @@ Run tests:
 ```bash
 npm test
 ```
-![Test output](assets/Jest Test.png)
+![Test output](assets/Jest%20Test.png)
 
 ## Generated outputs
 
