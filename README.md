@@ -53,8 +53,8 @@ The probing tool is implemented as a ReAct loop:
   - checking the returned record matches the written fields
 - The probe stops early on validation success; otherwise it continues until the attempt budget is exhausted.
 
-![API probing output](assets/Probe ss 1.png)
-![API probing output](assets/Probe ss 2.png)
+![API probing output](assets/Probe%20ss%201.png)
+![API probing output](assets/Probe%20ss%202.png)
 
 Key files:
 - Agent loop: src/probe_agent/agent.ts
